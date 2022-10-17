@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="text-center mt-5 mb-5"><i class="bi bi-book"> Procedure Type Active</i></h1>
+<div class="card card-body">
+  <table class="table table-hover mb-5 mt-5">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Person Level</th>
+        <th scope="col">Abreviaton</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let procedureTypeActive of procedureTypesActive">
+        <tr>
+            <td>{{procedureTypeActive.id}}</td>
+            <td>{{procedureTypeActive.name}}</td>
+            <td>{{procedureTypeActive.person_level}}</td>
+            <td>{{procedureTypeActive.abreviaton}}</td>
+            <td>
+              <button type="button" class="btn btn-light" (click)="update(procedureTypeActive)"><i class="bi bi-clipboard"> Update</i></button>
+              <button type="button" class="btn btn-secondary" (click)="delete(procedureTypeActive.id)"><i class="bi bi-trash3"> Delete</i></button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+</div>

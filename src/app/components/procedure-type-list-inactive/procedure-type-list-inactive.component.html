@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="text-center mt-5 mb-5"><i class="bi bi-book"> Procedure Type Inactive</i></h1>
+<div class="card card-body">
+  <table class="table table-hover mb-5 mt-5">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Person Level</th>
+        <th scope="col">Abreviaton</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let procedureTypeInactive of procedureTypesInactive">
+        <tr>
+            <td>{{procedureTypeInactive.id}}</td>
+            <td>{{procedureTypeInactive.name}}</td>
+            <td>{{procedureTypeInactive.person_level}}</td>
+            <td>{{procedureTypeInactive.abreviaton}}</td>
+            <td>
+              <button type="button" class="btn btn-light" (click)="update(procedureTypeInactive)"><i class="bi bi-clipboard"> Update</i></button>
+              <button type="button" class="btn btn-secondary" (click)="restore(procedureTypeInactive.id)"><i class="bi bi-arrow-repeat"> Restore</i></button>
+              <button type="button" class="btn btn-danger" (click)="deleteFinal(procedureTypeInactive.id)"><i class="bi bi-trash"> Delete</i></button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+</div>
