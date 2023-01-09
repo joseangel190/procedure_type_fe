@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  procedureTypeApi: 'http://app-be:8080/v1/procedure_type'
+  procedureTypeApi: '${DB_URL}'
 };
 
 /*
